@@ -1,0 +1,36 @@
+{
+  "name": "tomasfejfar/datetime-validator",
+  "type": "library",
+  "description": "Simple DateTime wrapper allowing strict date and time validation",
+  "keywords": [
+    "datetime",
+    "validation"
+  ],
+  "homepage": "https://github.com/tomasfejfar/datetime-validator",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tomáš Fejfar",
+      "email": "tomas.fejfar@gmail.com",
+      "homepage": "https://www.tomasfejfar.cz/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.7|~5.0",
+    "squizlabs/php_codesniffer": "~2.3",
+    "satooshi/php-coveralls": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DateTimeStrict\\": "src/DateTimeStrict"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "phpcs": "phpcs --standard=PSR2 src && phpcs --standard=PSR2 tests"
+  }
+}
