@@ -1,12 +1,12 @@
 {
-  "name": "tomasfejfar/datetime-validator",
+  "name": "tomasfejfar/datetime-strict",
   "type": "library",
   "description": "Simple DateTime wrapper allowing strict date and time validation",
   "keywords": [
     "datetime",
     "validation"
   ],
-  "homepage": "https://github.com/tomasfejfar/datetime-validator",
+  "homepage": "https://github.com/tomasfejfar/datetime-strict",
   "license": "MIT",
   "authors": [
     {
