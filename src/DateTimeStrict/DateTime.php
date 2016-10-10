@@ -4,12 +4,12 @@ namespace DateTimeStrict;
 
 class DateTime
 {
-    public static function createFromFormatStrict($format, $time, \DateTimeZone $object = null)
+    public static function createFromFormatStrict($format, $time, \DateTimeZone $timezone = null)
     {
-        if (!$object) {
-            $object = new \DateTimeZone(date_default_timezone_get());
+        if (!$timezone) {
+            $timezone = new \DateTimeZone(date_default_timezone_get());
         }
-        $date = \DateTime::createFromFormat($format, $time, $object);
+        $date = \DateTime::createFromFormat($format, $time, $timezone);
         $errors = \DateTime::getLastErrors();
         $noWarnings = $errors['warning_count'] === 0;
         $noErrors = $errors['error_count'] === 0;
