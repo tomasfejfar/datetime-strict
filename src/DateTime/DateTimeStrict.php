@@ -4,6 +4,16 @@ namespace TomasFejfar\DateTime;
 
 class DateTimeStrict
 {
+    /**
+     * Parse a string into a new DateTime object according to the specified format with strict checking
+     *
+     * @param string $format Format accepted by date().
+     * @param string $time String representing the time.
+     * @param \DateTimeZone $timezone A DateTimeZone object representing the desired time zone.
+     * @return \DateTime
+     * @throws StrictFormatException
+     * @link http://php.net/manual/en/datetime.createfromformat.php
+     */
     public static function createFromFormat($format, $time, \DateTimeZone $timezone = null)
     {
         if (!$timezone) {
