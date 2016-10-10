@@ -19,7 +19,7 @@ composer require tomasfejfar/datetime-strict
 ``` php
 use DateTimeStrict\DateTime;
 try {
-    $date = DateTime::createFromFormat('Y-m-d H:i:s', '2001-33-05 13:35:08');
+    $date = DateTime::createFromFormatStrict('Y-m-d H:i:s', '2001-33-05 13:35:08');
 } catch (StrictFormatException $e) {
     $warnings = $e->getWarnings();
 }
