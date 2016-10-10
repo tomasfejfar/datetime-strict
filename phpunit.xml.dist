@@ -13,13 +13,13 @@
     >
     <testsuites>
         <testsuite name="DateTimeStrict Test Suite">
-            <directory>tests/DateTimeStrict/</directory>
+            <directory>tests/DateTimeTest/</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory suffix=".php">src/DateTimeStrict/</directory>
+            <directory suffix=".php">src/DateTimeTest/</directory>
         </whitelist>
     </filter>
 

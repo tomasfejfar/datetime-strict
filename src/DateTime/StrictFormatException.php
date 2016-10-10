@@ -1,6 +1,6 @@
 <?php
 
-namespace DateTimeStrict;
+namespace TomasFejfar\DateTime;
 
 class StrictFormatException extends \Exception
 {

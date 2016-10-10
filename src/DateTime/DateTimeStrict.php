@@ -1,10 +1,10 @@
 <?php
 
-namespace DateTimeStrict;
+namespace TomasFejfar\DateTime;
 
-class DateTime
+class DateTimeStrict
 {
-    public static function createFromFormatStrict($format, $time, \DateTimeZone $timezone = null)
+    public static function createFromFormat($format, $time, \DateTimeZone $timezone = null)
     {
         if (!$timezone) {
             $timezone = new \DateTimeZone(date_default_timezone_get());
