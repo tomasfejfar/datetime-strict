@@ -4,7 +4,7 @@ namespace DateTimeStrict;
 
 class DateTime extends \DateTime
 {
-    public static function createFromFormat($format, $time, $object = null)
+    public static function createFromFormat($format, $time, \DateTimeZone $object = null)
     {
         $date = parent::createFromFormat($format, $time, $object);
         $errors = \DateTime::getLastErrors();
