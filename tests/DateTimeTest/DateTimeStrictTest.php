@@ -2,7 +2,7 @@
 namespace TomasFejfarTest\DateTime;
 
 use TomasFejfar\DateTime\DateTimeStrict;
-use TomasFejfar\DateTime\StrictFormatException;
+use TomasFejfar\DateTime\InvalidFormatException;
 
 class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
 {
@@ -18,7 +18,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
         try {
             $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 13:35:08');
             $this->fail('Must throw exception!');
-        } catch (StrictFormatException $e) {
+        } catch (InvalidFormatException $e) {
             $warnings = $e->getWarnings();
             $this->assertCount(1, $warnings);
             $warning = array_pop($warnings);
@@ -31,7 +31,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
         try {
             $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11 24:35:08');
             $this->fail('Must throw exception!');
-        } catch (StrictFormatException $e) {
+        } catch (InvalidFormatException $e) {
             $warnings = $e->getWarnings();
             $this->assertCount(1, $warnings);
             $warning = array_pop($warnings);
@@ -43,7 +43,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
         try {
             $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 24:35:08');
             $this->fail('Must throw exception!');
-        } catch (StrictFormatException $e) {
+        } catch (InvalidFormatException $e) {
             $warnings = $e->getWarnings();
             $this->assertCount(1, $warnings);
             $warning = array_pop($warnings);
@@ -55,7 +55,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
         try {
             $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11');
             $this->fail('Must throw exception!');
-        } catch (StrictFormatException $e) {
+        } catch (InvalidFormatException $e) {
             $errors = $e->getErrors();
             $this->assertCount(1, $errors);
             $error = array_pop($errors);
@@ -67,7 +67,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
         try {
             $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', 'this is not a date');
             $this->fail('Must throw exception!');
-        } catch (StrictFormatException $e) {
+        } catch (InvalidFormatException $e) {
             $errors = $e->getErrors();
             $this->assertCount(2, $errors);
             $error = array_pop($errors);

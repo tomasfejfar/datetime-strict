@@ -2,7 +2,7 @@
 
 namespace TomasFejfar\DateTime;
 
-class StrictFormatException extends \Exception
+class InvalidFormatException extends \Exception
 {
     /**
      * @var array

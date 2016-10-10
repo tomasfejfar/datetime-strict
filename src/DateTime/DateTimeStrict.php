@@ -11,7 +11,7 @@ class DateTimeStrict
      * @param string $time String representing the time.
      * @param \DateTimeZone $timezone A DateTimeZone object representing the desired time zone.
      * @return \DateTime
-     * @throws StrictFormatException
+     * @throws InvalidFormatException
      * @link http://php.net/manual/en/datetime.createfromformat.php
      */
     public static function createFromFormat($format, $time, \DateTimeZone $timezone = null)
@@ -27,6 +27,6 @@ class DateTimeStrict
             return $date;
         }
         $message = sprintf('Invalid date time format "%s"', $time);
-        throw new StrictFormatException($message, 0, null, $errors['errors'], $errors['warnings']);
+        throw new InvalidFormatException($message, 0, null, $errors['errors'], $errors['warnings']);
     }
 }
