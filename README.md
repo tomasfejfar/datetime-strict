@@ -2,7 +2,7 @@
  
 [![Build Status][ico-travis]][link-travis]
 [![Quality Score][ico-code-quality]][link-code-quality]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Coverage Status][ico-coveralls]][link-coveralls]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Latest Version on Packagist][ico-version]][link-packagist]
 
@@ -42,12 +42,12 @@ composer phpcs
 
 [ico-version]: https://img.shields.io/packagist/v/tomasfejfar/datetime-strict.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/tomasfejfar/datetime-strict/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/tomasfejfar/datetime-strict.svg?style=flat-square
+[ico-coveralls]: https://coveralls.io/repos/github/tomasfejfar/datetime-strict/badge.svg?branch=master
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/tomasfejfar/datetime-strict.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/tomasfejfar/datetime-strict.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/tomasfejfar/datetime-strict
 [link-travis]: https://travis-ci.org/tomasfejfar/datetime-strict
-[link-scrutinizer]: https://scrutinizer-ci.com/g/tomasfejfar/datetime-strict/code-structure
+[link-coveralls]: https://coveralls.io/github/tomasfejfar/datetime-strict?branch=master
 [link-code-quality]: https://scrutinizer-ci.com/g/tomasfejfar/datetime-strict
 [link-downloads]: https://packagist.org/packages/tomasfejfar/datetime-strict
