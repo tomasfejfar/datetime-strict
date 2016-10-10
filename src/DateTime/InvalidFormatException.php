@@ -5,12 +5,12 @@ namespace TomasFejfar\DateTime;
 class InvalidFormatException extends \Exception
 {
     /**
-     * @var array
+     * @var string[]
      */
     protected $errors;
 
     /**
-     * @var array
+     * @var string[]
      */
     protected $warnings;
 
@@ -36,7 +36,7 @@ class InvalidFormatException extends \Exception
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getErrors()
     {
@@ -44,7 +44,7 @@ class InvalidFormatException extends \Exception
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getWarnings()
     {
