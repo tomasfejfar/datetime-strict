@@ -23,7 +23,7 @@ class DateTimeStrict
         $errors = \DateTime::getLastErrors();
         $noWarnings = $errors['warning_count'] === 0;
         $noErrors = $errors['error_count'] === 0;
-        if ($noWarnings && $noErrors) {
+        if ($date !== false && $noWarnings && $noErrors) {
             return $date;
         }
         $message = sprintf('Invalid date time format "%s"', $time);
