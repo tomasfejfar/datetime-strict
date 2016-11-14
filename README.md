@@ -4,6 +4,8 @@
 [![Coverage Status][ico-coveralls]][link-coveralls]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Latest Version on Packagist][ico-version]][link-packagist]
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/tomasfejfar/datetime-strict.svg)](http://isitmaintained.com/project/tomasfejfar/datetime-strict "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/tomasfejfar/datetime-strict.svg)](http://isitmaintained.com/project/tomasfejfar/datetime-strict "Percentage of issues still open")
 
 Simple wrapper around DateTime to allow strict datetime validation
 
