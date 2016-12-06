@@ -16,7 +16,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateInvalidDate()
     {
         try {
-            $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 13:35:08');
+            DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 13:35:08');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $warnings = $e->getWarnings();
@@ -29,7 +29,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateInvalidTime()
     {
         try {
-            $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11 24:35:08');
+            DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11 24:35:08');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $warnings = $e->getWarnings();
@@ -41,7 +41,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateInvalidDateTime()
     {
         try {
-            $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 24:35:08');
+            DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 24:35:08');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $warnings = $e->getWarnings();
@@ -53,7 +53,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateValidDate()
     {
         try {
-            $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11');
+            DateTimeStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $errors = $e->getErrors();
@@ -65,7 +65,7 @@ class DateTimeStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateInvalidFormat()
     {
         try {
-            $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', 'this is not a date');
+            DateTimeStrict::createFromFormat('Y-m-d H:i:s', 'this is not a date');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $errors = $e->getErrors();

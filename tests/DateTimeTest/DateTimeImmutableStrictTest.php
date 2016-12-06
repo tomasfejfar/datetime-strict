@@ -16,7 +16,7 @@ class DateTimeImmutableStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateInvalidDate()
     {
         try {
-            $date = DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 13:35:08');
+            DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 13:35:08');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $warnings = $e->getWarnings();
@@ -29,7 +29,7 @@ class DateTimeImmutableStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateInvalidTime()
     {
         try {
-            $date = DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11 24:35:08');
+            DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11 24:35:08');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $warnings = $e->getWarnings();
@@ -42,7 +42,7 @@ class DateTimeImmutableStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateInvalidDateTime()
     {
         try {
-            $date = DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 24:35:08');
+            DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', '1986-13-11 24:35:08');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $warnings = $e->getWarnings();
@@ -55,7 +55,7 @@ class DateTimeImmutableStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateValidDate()
     {
         try {
-            $date = DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11');
+            DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', '1986-08-11');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $errors = $e->getErrors();
@@ -68,7 +68,7 @@ class DateTimeImmutableStrictTest extends \PHPUnit_Framework_TestCase
     public function testCreateInvalidFormat()
     {
         try {
-            $date = DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', 'this is not a date');
+            DateTimeImmutableStrict::createFromFormat('Y-m-d H:i:s', 'this is not a date');
             $this->fail('Must throw exception!');
         } catch (InvalidFormatException $e) {
             $errors = $e->getErrors();
