@@ -21,12 +21,13 @@ class DateTimeStrict
         }
         $date = \DateTime::createFromFormat($format, $time, $timezone);
         $errors = \DateTime::getLastErrors();
-        $noWarnings = $errors['warning_count'] === 0;
-        $noErrors = $errors['error_count'] === 0;
-        if ($date !== false && $noWarnings && $noErrors) {
+        $handler = new DateTimeErrorHandler();
+        try {
+            $handler->handle($date, $errors);
             return $date;
+        } catch (InvalidFormatException $e) {
+            $message = sprintf('Invalid date time format "%s"', $time);
+            throw new InvalidFormatException($message, 0, null, $e->getErrors(), $e->getWarnings());
         }
-        $message = sprintf('Invalid date time format "%s"', $time);
-        throw new InvalidFormatException($message, 0, null, $errors['errors'], $errors['warnings']);
     }
 }
