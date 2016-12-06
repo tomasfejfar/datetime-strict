@@ -1,16 +1,15 @@
 <?php
-
 namespace TomasFejfar\DateTime;
 
-class DateTimeStrict
+class DateTimeImmutableStrict
 {
     /**
-     * Parse a string into a new DateTime object according to the specified format with strict checking
+     * Parse a string into a new DateTimeImmutable object according to the specified format with strict checking
      *
      * @param string $format Format accepted by date().
      * @param string $time String representing the time.
      * @param \DateTimeZone $timezone A DateTimeZone object representing the desired time zone.
-     * @return \DateTime
+     * @return \DateTimeImmutable
      * @throws InvalidFormatException
      * @link http://php.net/manual/en/datetime.createfromformat.php
      */
@@ -19,8 +18,8 @@ class DateTimeStrict
         if (!$timezone) {
             $timezone = new \DateTimeZone(date_default_timezone_get());
         }
-        $date = \DateTime::createFromFormat($format, $time, $timezone);
-        $errors = \DateTime::getLastErrors();
+        $date = \DateTimeImmutable::createFromFormat($format, $time, $timezone);
+        $errors = \DateTimeImmutable::getLastErrors();
         $handler = new DateTimeErrorHandler();
         try {
             $handler->handle($date, $errors);

@@ -25,8 +25,11 @@ try {
     $date = DateTimeStrict::createFromFormat('Y-m-d H:i:s', '2001-33-05 13:35:08');
 } catch (StrictFormatException $e) {
     $warnings = $e->getWarnings();
+    $errors = $e->getErrors();
 }
 ```
+
+Usage for immutable variant is the same, just use `DateTimeImmutableStrict::createFromFormat()` instead. 
 
 ## Changelog
 
