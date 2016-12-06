@@ -28,6 +28,10 @@ try {
 }
 ```
 
+## Changelog
+
+Changes can be found in each tag's annotation
+
 ## Rules for contributing
 
 - **1 PR per feature**
